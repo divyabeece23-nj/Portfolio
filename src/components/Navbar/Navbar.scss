@@ -1,0 +1,150 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
+  border-bottom: 1px solid transparent;
+
+  &--solid {
+    background: rgba(248, 245, 240, 0.92);
+    backdrop-filter: blur(18px);
+    border-bottom-color: rgba(180, 170, 158, 0.2);
+  }
+
+  &__inner {
+    @include m.container;
+    height: v.$nav-h;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-family: v.$font-display;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: v.$ink;
+    letter-spacing: -0.03em;
+  }
+
+  &__dot { color: v.$accent; }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+
+    @include m.md { display: none; }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: v.$ink-muted;
+    letter-spacing: 0.02em;
+    @include m.underline-hover;
+    transition: color 0.2s;
+
+    &:hover { color: v.$ink; }
+  }
+
+  &__link-num {
+    font-size: 0.62rem;
+    color: v.$accent;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin-top: 1px;
+  }
+
+  &__resume {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: v.$accent;
+    border: 1px solid v.$accent;
+    border-radius: 3px;
+    padding: 0.45rem 1rem;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+      background: v.$accent;
+      color: v.$white;
+    }
+  }
+
+  // ── Burger ─────────────────────────────────────────────
+  &__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 6px;
+
+    @include m.md { display: flex; }
+
+    span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: v.$ink;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    &.open {
+      span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+      span:nth-child(2) { opacity: 0; }
+      span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+    }
+  }
+
+  // ── Mobile menu ────────────────────────────────────────
+  &__mobile {
+    display: none;
+    flex-direction: column;
+    padding: 24px;
+    background: v.$white;
+    border-top: 1px solid rgba(180, 170, 158, 0.2);
+    gap: 4px;
+
+    @include m.md {
+      &.open { display: flex; }
+    }
+  }
+
+  &__mobile-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    font-family: v.$font-display;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: v.$ink;
+    border-bottom: 1px solid rgba(180, 170, 158, 0.12);
+    text-align: left;
+    transition: color 0.2s;
+
+    &:hover { color: v.$accent; }
+  }
+
+  &__mobile-num {
+    font-family: v.$font-body;
+    font-size: 0.6rem;
+    color: v.$accent;
+    letter-spacing: 0.1em;
+  }
+
+  &__mobile-resume {
+    margin-top: 16px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: v.$accent;
+    letter-spacing: 0.06em;
+    align-self: flex-start;
+  }
+}

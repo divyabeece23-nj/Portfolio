@@ -1,0 +1,192 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+@keyframes charIn {
+  from { opacity: 0; transform: translateY(60%) rotate(4deg); }
+  to   { opacity: 1; transform: translateY(0)    rotate(0deg); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scrollPulse {
+  0%, 100% { transform: scaleY(1); opacity: 0.5; }
+  50%       { transform: scaleY(0.5); opacity: 1; }
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: v.$nav-h;
+  position: relative;
+  overflow: hidden;
+
+  &__inner {
+    @include m.container;
+    padding-block: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    position: relative;
+    z-index: 2;
+  }
+
+  // ── Eyebrow ───────────────────────────────────────────
+  &__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: v.$accent;
+    animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+
+    &.visible { opacity: 1; transform: none; }
+  }
+
+  &__eyebrow-line {
+    display: inline-block;
+    width: 28px;
+    height: 1.5px;
+    background: v.$accent;
+  }
+
+  // ── Name ──────────────────────────────────────────────
+  &__name {
+    font-family: v.$font-display;
+    font-size: clamp(4rem, 11vw, 9.5rem);
+    font-weight: 600;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: v.$ink;
+    overflow: hidden;
+  }
+
+  &__char {
+    display: inline-block;
+    opacity: 0;
+    animation: charIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  // ── Role ──────────────────────────────────────────────
+  &__role {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+    &.visible { opacity: 1; transform: none; }
+  }
+
+  &__role-tag {
+    font-family: v.$font-display;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: v.$ink-muted;
+    letter-spacing: -0.01em;
+  }
+
+  &__role-sep {
+    font-size: 1rem;
+    color: v.$ink-faint;
+  }
+
+  // ── Tagline ───────────────────────────────────────────
+  &__tagline {
+    font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+    font-weight: 300;
+    line-height: 1.8;
+    color: v.$ink-muted;
+    animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
+    &.visible { opacity: 1; transform: none; }
+  }
+
+  // ── CTA ───────────────────────────────────────────────
+  &__cta {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
+    &.visible { opacity: 1; transform: none; }
+  }
+
+  &__btn {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 0.85rem 2rem;
+    border-radius: 3px;
+    transition: all 0.25s;
+
+    &--primary {
+      background: v.$ink;
+      color: v.$white;
+      &:hover {
+        background: v.$accent;
+        transform: translateY(-2px);
+      }
+    }
+
+    &--ghost {
+      color: v.$ink-muted;
+      @include m.underline-hover;
+      padding-inline: 0;
+
+      &:hover { color: v.$ink; }
+    }
+  }
+
+  // ── Scroll hint ───────────────────────────────────────
+  &__scroll {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: fadeUp 0.7s 1.2s both;
+
+    @include m.md { display: none; }
+  }
+
+  &__scroll-line {
+    width: 1px;
+    height: 56px;
+    background: linear-gradient(to bottom, v.$accent, transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  &__scroll-label {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: v.$ink-muted;
+    writing-mode: vertical-rl;
+  }
+
+  // ── Background number ─────────────────────────────────
+  &__bg-num {
+    position: absolute;
+    right: -2vw;
+    bottom: -4vw;
+    font-family: v.$font-display;
+    font-size: clamp(14rem, 26vw, 26rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(180, 170, 158, 0.18);
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+
+    @include m.md { display: none; }
+  }
+}
