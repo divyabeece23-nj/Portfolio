@@ -1,5 +1,5 @@
 import './styles/main.scss'
-import Cursor   from './components/Cursor/Cursor'
+// import Cursor   from './components/Cursor/Cursor'
 import Navbar   from './components/Navbar/Navbar'
 import Hero     from './components/Hero/Hero'
 import About    from './components/About/About'
@@ -11,7 +11,7 @@ import Footer   from './components/Footer/Footer'
 export default function App() {
   return (
     <>
-      <Cursor />
+      {/* <Cursor /> */}
       <Navbar />
       <main>
         <Hero />
