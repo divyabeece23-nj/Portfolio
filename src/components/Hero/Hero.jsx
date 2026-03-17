@@ -26,12 +26,6 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="hero__inner">
 
-        {/* Eyebrow */}
-        <p className="hero__eyebrow reveal">
-          <span className="hero__eyebrow-line" />
-          Available for work
-        </p>
-
         {/* Name */}
         <h1 className="hero__name" ref={nameRef}>
           Divya Natarajan
@@ -39,9 +33,9 @@ export default function Hero() {
 
         {/* Role line */}
         <div className="hero__role reveal reveal-delay-2">
-          <span className="hero__role-tag">Full Stack</span>
-          <span className="hero__role-sep">&</span>
-          <span className="hero__role-tag">Software Engineer</span>
+          <span className="hero__role-tag">Full Stack Engineer</span>
+          <span className="hero__role-sep">|</span>
+          <span className="hero__role-tag"> Fintech & Banking Operations Specialist</span>
         </div>
 
         {/* Tagline */}
@@ -67,8 +61,6 @@ export default function Hero() {
         </button>
       </div>
 
-      {/* Large decorative number */}
-      <div className="hero__bg-num" aria-hidden="true">01</div>
     </section>
   )
 }

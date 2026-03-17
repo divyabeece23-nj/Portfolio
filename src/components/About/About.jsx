@@ -2,8 +2,7 @@ import useScrollReveal from '../../hooks/useScrollReveal'
 import './About.scss'
 
 const STATS = [
-  { val: '6mo', label: 'Coding journey' },
-  { val: '2+',  label: 'Projects shipped' },
+  { val: '10+', label: 'Years in Banking & Fintech' },
   { val: '10+', label: 'Technologies learned' },
 ]
 
@@ -42,30 +41,42 @@ export default function About() {
 
         {/* Right — content */}
         <div className="about__right">
-          <h2 className="about__heading reveal">
-            A developer who cares<br />
-            about the <em>craft.</em>
-          </h2>
+          {/* <h2 className="about__heading reveal">
+            <br />
+            to <em>building code.</em>
+          </h2> */}
 
           <div className="about__body">
             <p className="reveal reveal-delay-1">
-              Hey — I'm <strong>Divya Natarajan</strong>, a full-stack software engineer
-              based in <strong>Toronto, Canada</strong>. I started my coding journey in September 2025
-              through BrainStation's Software Engineering Bootcamp — and in just 6 months
-              I've gone from zero to building and deploying full-stack applications.
+              Hey — I'm <strong>Divya Natarajan</strong>, a software engineer based
+              in <strong>Toronto</strong> who enjoys building reliable systems that power
+              real-world operations.
             </p>
             <p className="reveal reveal-delay-2">
-              I care about clean architecture, thoughtful UX, and code that actually lasts.
-              Outside of code you'll find me travelling, listening to music, reading,
-              watching movies, or spending time with my pets —
-              experiences I believe make engineers more empathetic builders.
+              With over a decade in <strong>Retail Banking and Fintech</strong>, I currently
+              work as a <strong>Senior Payment Specialist</strong>, managing mission-critical
+              financial systems daily. This hands-on experience with complex platforms operating
+              at scale is what drove me to pursue software engineering
+              through <strong>BrainStation</strong> — a deliberate step from managing
+              the systems behind the modern economy to building them myself.
+            </p>
+            <p className="reveal reveal-delay-3">
+              Today, I focus on full-stack development, clean architecture, and thoughtful
+              user experiences. My background in financial operations shapes how I approach
+              development: with a reliability-first mindset, strong attention to data integrity,
+              and a commitment to building secure, resilient systems.
+            </p>
+            <p className="reveal reveal-delay-4">
+              Outside of coding, I enjoy travelling, reading, and spending time with my pets —
+              experiences that keep me curious and grounded, qualities I bring into the way
+              I design and build technology.
             </p>
           </div>
 
           {/* Links */}
-          <div className="about__links reveal reveal-delay-3">
+          <div className="about__links reveal reveal-delay-5">
             {[
-              { label: 'GitHub',   href: 'https://github.com/divyabeece23' },
+              { label: 'GitHub', href: 'https://github.com/divyabeece23' },
               { label: 'LinkedIn', href: 'https://linkedin.com/in/divyabeece23' },
             ].map(({ label, href }) => (
               <a key={label} href={href} target="_blank" rel="noreferrer" className="about__link">

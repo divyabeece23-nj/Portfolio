@@ -35,7 +35,7 @@
   // ── Grid ─────────────────────────────────────────────────
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2px;
     background: rgba(180, 170, 158, 0.2);
     border: 1px solid rgba(180, 170, 158, 0.2);

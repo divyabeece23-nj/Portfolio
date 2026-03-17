@@ -14,11 +14,7 @@ const CATEGORIES = [
     label: 'Tools & Platforms',
     items: ['Git / GitHub', 'Figma', 'Vite', 'Vercel', 'Render'],
   },
-  {
-    label: 'Currently Exploring',
-    items: ['Next.js', 'Tailwind CSS', 'Docker', 'PostgreSQL'],
-    exploring: true,
-  },
+  
 ]
 
 export default function Skills() {

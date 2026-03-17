@@ -2,16 +2,41 @@
 @use '../../styles/mixins' as m;
 
 @keyframes charIn {
-  from { opacity: 0; transform: translateY(60%) rotate(4deg); }
-  to   { opacity: 1; transform: translateY(0)    rotate(0deg); }
+  from {
+    opacity: 0;
+    transform: translateY(60%) rotate(4deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
 }
+
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 @keyframes scrollPulse {
-  0%, 100% { transform: scaleY(1); opacity: 0.5; }
-  50%       { transform: scaleY(0.5); opacity: 1; }
+
+  0%,
+  100% {
+    transform: scaleY(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scaleY(0.5);
+    opacity: 1;
+  }
 }
 
 .hero {
@@ -45,7 +70,10 @@
     color: v.$accent;
     animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 
-    &.visible { opacity: 1; transform: none; }
+    &.visible {
+      opacity: 1;
+      transform: none;
+    }
   }
 
   &__eyebrow-line {
@@ -60,10 +88,10 @@
     font-family: v.$font-display;
     font-size: clamp(4rem, 11vw, 9.5rem);
     font-weight: 600;
-    line-height: 0.92;
     letter-spacing: -0.04em;
     color: v.$ink;
-    overflow: hidden;
+    line-height: 1.05;
+    overflow: visible;
   }
 
   &__char {
@@ -79,7 +107,11 @@
     gap: 14px;
     flex-wrap: wrap;
     animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
-    &.visible { opacity: 1; transform: none; }
+
+    &.visible {
+      opacity: 1;
+      transform: none;
+    }
   }
 
   &__role-tag {
@@ -103,7 +135,11 @@
     line-height: 1.8;
     color: v.$ink-muted;
     animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
-    &.visible { opacity: 1; transform: none; }
+
+    &.visible {
+      opacity: 1;
+      transform: none;
+    }
   }
 
   // ── CTA ───────────────────────────────────────────────
@@ -113,7 +149,11 @@
     align-items: center;
     flex-wrap: wrap;
     animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
-    &.visible { opacity: 1; transform: none; }
+
+    &.visible {
+      opacity: 1;
+      transform: none;
+    }
   }
 
   &__btn {
@@ -127,6 +167,7 @@
     &--primary {
       background: v.$ink;
       color: v.$white;
+
       &:hover {
         background: v.$accent;
         transform: translateY(-2px);
@@ -138,7 +179,9 @@
       @include m.underline-hover;
       padding-inline: 0;
 
-      &:hover { color: v.$ink; }
+      &:hover {
+        color: v.$ink;
+      }
     }
   }
 
@@ -153,7 +196,9 @@
     gap: 8px;
     animation: fadeUp 0.7s 1.2s both;
 
-    @include m.md { display: none; }
+    @include m.md {
+      display: none;
+    }
   }
 
   &__scroll-line {
@@ -187,6 +232,8 @@
     pointer-events: none;
     z-index: 1;
 
-    @include m.md { display: none; }
+    @include m.md {
+      display: none;
+    }
   }
 }
