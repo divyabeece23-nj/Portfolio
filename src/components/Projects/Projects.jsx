@@ -5,51 +5,52 @@ import './Projects.scss'
 const PROJECTS = [
   {
     num: '01',
-    title: 'Project One',
-    subtitle: 'Full Stack · E-Commerce',
-    year: '2024',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    summary: 'Custom B2B storefront replacing a legacy Shopify setup. Complex role-based pricing, sub-1s LCP on all product pages.',
+    title: 'ReelReads',
+    subtitle: 'Full Stack · Movie Reviews',
+    year: '2025',
+    tags: ['React', 'Node.js', 'MongoDB', 'OMDb API', 'JWT'],
+    summary: 'A movie discovery and review platform — search millions of movies, save favourites, rate and review. Features curated trending sections with genre filtering.',
     caseStudy: {
-      ask: 'A client needed a custom storefront with B2B pricing logic their existing Shopify plan could not support. The ask: rebuild from scratch, keep it fast, and make it maintainable.',
-      delivered: 'Full-stack app — React frontend, Node/Express API, PostgreSQL. Stripe integration with webhook retry logic and idempotency keys. Deployed on AWS with a CDN layer for static assets.',
-      knownAhead: ['React', 'Node.js', 'REST API design', 'PostgreSQL'],
-      hadToLearn: ['Stripe Webhooks & idempotency', 'AWS S3 image storage', 'Server-side rendering for SEO'],
-      nextSteps: ['Migrate to Next.js App Router', 'Add a product recommendation engine', 'Real-time inventory via WebSockets'],
+      ask: 'Wanted to build a full-stack app that lets users discover movies, save favourites, and share reviews — something beyond a basic CRUD project with real authentication, external APIs, and a polished UI.',
+      delivered: 'Full-stack app with React frontend and Node/Express API backed by MongoDB. JWT authentication with bcrypt password hashing, email verification, and password reset via Nodemailer. Integrated OMDb API for movie data and built a custom trending system with genre filtering and a rotating "Movie of the Day" feature. Deployed frontend on Vercel and backend on Render with auto-deploy from GitHub.',
+      knownAhead: ['React', 'Node.js / Express', 'MongoDB / Mongoose', 'REST API design'],
+      hadToLearn: ['JWT authentication flow', 'OMDb API integration', 'CORS with Vercel preview deployments', 'Email verification with crypto tokens', 'SCSS design systems with variables and mixins'],
+      nextSteps: ['Add TMDB API for better discovery', 'Watchlist statuses (Watched / Want to Watch)', 'Personal stats dashboard', 'Social features — follow users and review feeds'],
+    },
+    github: 'https://github.com/divyabeece23-nj/Movie-Book-App-Frontend.git',
+    githubBackend: 'https://github.com/divyabeece23-nj/Movie-Book-App-Backend.git',
+    live: 'https://reelreads-app.vercel.app',
+  },
+  {
+    num: '02',
+    title: 'InkWell',
+    subtitle: 'Full Stack · Blog Platform',
+    year: '2025',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
+    summary: 'A free-to-use blogging platform where anyone can write, publish, and share blog posts. Clean writing experience with a focus on simplicity.',
+    caseStudy: {
+      ask: 'Build a blogging platform that makes it easy for anyone to write and publish posts — no paywalls, no clutter, just a clean space to share ideas.',
+      delivered: 'Full-stack blog app with React frontend and Node/Express backend. MongoDB for storing posts and user data. User authentication for managing your own posts. Clean, minimal UI focused on the reading and writing experience.',
+      knownAhead: ['React', 'Node.js / Express', 'MongoDB', 'REST APIs'],
+      hadToLearn: ['Rich text editing', 'Content management patterns', 'Deploying full-stack apps on Vercel + Render'],
+      nextSteps: ['Add rich text editor', 'Categories and tags for posts', 'Comments and likes', 'User profiles with post history'],
     },
     github: '#',
     live: '#',
   },
   {
-    num: '02',
-    title: 'Project Two',
-    subtitle: 'Dashboard · Analytics',
-    year: '2023',
-    tags: ['TypeScript', 'D3.js', 'Python', 'FastAPI'],
-    summary: 'Data visualisation dashboard aggregating metrics from 4 API sources for a marketing team. Near real-time, fully accessible.',
-    caseStudy: {
-      ask: 'Marketing team drowning in spreadsheets needed one dashboard across 4 analytics platforms — with KPIs, trends and anomaly highlights.',
-      delivered: 'D3.js dashboard with a Python/FastAPI aggregation layer. All charts have ARIA labels and keyboard-navigable table fallbacks.',
-      knownAhead: ['TypeScript', 'React', 'API integration', 'Accessibility basics'],
-      hadToLearn: ['D3.js data joins (entirely new)', 'FastAPI', 'Responsive SVG techniques'],
-      nextSteps: ['WebSocket live updates', 'Shareable filter state in the URL', 'White-label theming'],
-    },
-    github: '#',
-    live: null,
-  },
-  {
     num: '03',
-    title: 'Project Three',
-    subtitle: 'CLI Tool · Developer Tooling',
-    year: '2023',
-    tags: ['Python', 'OpenAI API', 'Docker', 'Click'],
-    summary: 'AI-powered CLI that automates PR descriptions, commit messages and pre-review checks using LLM context of the diff.',
+    title: 'Eventure',
+    subtitle: 'Full Stack · Event Management',
+    year: '2024',
+    tags: ['React', 'Node.js', 'Express'],
+    summary: 'An event registration platform where users can browse upcoming events throughout the year, register for ones they\'re interested in, and manage their registrations.',
     caseStudy: {
-      ask: 'A personal productivity problem: writing the same types of PR descriptions repeatedly. Wanted a one-command shortcut that understood the codebase context.',
-      delivered: 'pip-installable CLI with streaming output, TOML config with sane defaults, and diff-aware prompts that outperform naive approaches.',
-      knownAhead: ['Python', 'Click CLI framework', 'OpenAI API basics'],
-      hadToLearn: ['Docker multi-stage builds', 'Streaming LLM responses to terminal', 'TOML config schema validation'],
-      nextSteps: ['Plugin architecture', 'Ollama support for local models', 'Publish to PyPI + Homebrew tap'],
+      ask: 'BrainStation project — build an event management platform that handles user registration for various events, with the ability to register and cancel registrations.',
+      delivered: 'Full-stack event platform with React frontend and Node/Express backend. Users can browse events, register with one click, and cancel their registrations. Clean UI showing event details, dates, and registration status.',
+      knownAhead: ['React', 'JavaScript', 'HTML/CSS'],
+      hadToLearn: ['Node.js / Express backend', 'API routing and middleware', 'State management for registration flows'],
+      nextSteps: ['Add a database for persistent storage', 'User authentication', 'Event filtering by category and date', 'Email confirmations on registration'],
     },
     github: '#',
     live: null,
@@ -58,7 +59,7 @@ const PROJECTS = [
     num: '04',
     title: 'This Portfolio',
     subtitle: 'React · Personal Brand',
-    year: '2024',
+    year: '2025',
     tags: ['React', 'Framer Motion', 'SCSS', 'Vite'],
     summary: 'This site — built to be a demonstration of craft in itself. Clean architecture, smooth animations, no template.',
     caseStudy: {
@@ -132,7 +133,12 @@ function CaseStudyModal({ project, onClose }) {
             <a href={project.github} target="_blank" rel="noreferrer" className="modal__btn modal__btn--dark">
               GitHub ↗
             </a>
-            {project.live && (
+            {project.githubBackend && project.githubBackend !== '#' && (
+              <a href={project.githubBackend} target="_blank" rel="noreferrer" className="modal__btn modal__btn--dark">
+                Backend Repo ↗
+              </a>
+            )}
+            {project.live && project.live !== '#' && (
               <a href={project.live} target="_blank" rel="noreferrer" className="modal__btn modal__btn--ghost">
                 Live Demo ↗
               </a>
