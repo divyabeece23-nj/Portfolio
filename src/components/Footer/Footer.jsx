@@ -11,7 +11,7 @@ export default function Footer() {
         </div>
 
         <p className="footer__copy">
-          © {year} Your Name · Built with React &amp; SCSS
+          © {year} Divya Natarajan · Built with React &amp; SCSS
         </p>
 
         <div className="footer__links">
