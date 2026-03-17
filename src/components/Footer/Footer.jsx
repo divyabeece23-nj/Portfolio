@@ -11,11 +11,11 @@ export default function Footer() {
         </div>
 
         <p className="footer__copy">
-          © {year} Divya Natarajan · Built with React &amp; SCSS
+          © {year} Divya Natarajan ·
         </p>
 
         <div className="footer__links">
-          {['GitHub', 'LinkedIn', 'Twitter'].map(l => (
+          {['GitHub', 'LinkedIn'].map(l => (
             <a key={l} href="#" target="_blank" rel="noreferrer" className="footer__link">
               {l}
             </a>
