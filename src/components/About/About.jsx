@@ -43,15 +43,15 @@ export default function About() {
           <div className="about__body">
             <p className="reveal reveal-delay-1">
               Hey — I'm <strong>Divya Natarajan</strong>, a software engineer based
-              in <strong>Toronto</strong> who enjoys building reliable systems that power
+              in Toronto who enjoys building reliable systems that power
               real-world operations.
             </p>
             <p className="reveal reveal-delay-2">
-              With over a decade in <strong>Retail Banking and Fintech</strong>, I currently
-              work as a <strong>Senior Payment Specialist</strong>, managing mission-critical
+              With over a decade in Retail Banking and Fintech, I currently
+              work as a Senior Payment Specialist, managing mission-critical
               financial systems daily. This hands-on experience with complex platforms operating
               at scale is what drove me to pursue software engineering
-              through <strong>BrainStation</strong> — a deliberate step from managing
+              through BrainStation — a deliberate step from managing
               the systems behind the modern economy to building them myself.
             </p>
             <p className="reveal reveal-delay-3">
