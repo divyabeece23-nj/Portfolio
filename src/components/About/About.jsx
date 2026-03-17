@@ -13,19 +13,13 @@ export default function About() {
     <section className="about" id="about" ref={ref}>
       <div className="about__inner">
 
-        {/* Left — sticky label + image */}
+        {/* Left — label + stats */}
         <div className="about__left">
           <p className="section-label reveal">About</p>
 
-          <div className="about__img-wrap reveal reveal-delay-1">
-            {/* Replace with your photo: <img src="/photo.jpg" alt="Divya Natarajan" /> */}
-            <div className="about__img-placeholder">
-              <span>DN</span>
-            </div>
-            <div className="about__img-tag">
-              <span className="about__img-tag-dot" />
-              Open to opportunities
-            </div>
+          <div className="about__img-tag reveal reveal-delay-1">
+            <span className="about__img-tag-dot" />
+            Open to opportunities
           </div>
 
           {/* Stats */}
@@ -42,7 +36,7 @@ export default function About() {
         {/* Right — content */}
         <div className="about__right">
           {/* <h2 className="about__heading reveal">
-            <br />
+            From banking floors<br />
             to <em>building code.</em>
           </h2> */}
 
