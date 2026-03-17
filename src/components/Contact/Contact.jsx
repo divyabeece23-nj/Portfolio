@@ -3,8 +3,8 @@ import useScrollReveal from '../../hooks/useScrollReveal'
 import './Contact.scss'
 
 export default function Contact() {
-  const [form, setForm]   = useState({ name: '', email: '', message: '' })
-  const [sent, setSent]   = useState(false)
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [sent, setSent] = useState(false)
   const [error, setError] = useState(false)
   const ref = useScrollReveal()
 
@@ -39,14 +39,13 @@ export default function Contact() {
             href="mailto:you@email.com"
             className="contact__email reveal reveal-delay-3"
           >
-            you@email.com
+            divyabeece23@gmail.com
           </a>
 
           <div className="contact__socials reveal reveal-delay-4">
             {[
-              { label: 'GitHub',   href: 'https://github.com' },
+              { label: 'GitHub', href: 'https://github.com' },
               { label: 'LinkedIn', href: 'https://linkedin.com' },
-              { label: 'Twitter',  href: 'https://twitter.com' },
             ].map(({ label, href }) => (
               <a key={label} href={href} target="_blank" rel="noreferrer" className="contact__social">
                 {label} ↗
@@ -82,7 +81,7 @@ export default function Contact() {
                   <input
                     type="email"
                     name="email"
-                    placeholder="your@email.com"
+                    placeholder="divyabeece23@gmail.com"
                     value={form.email}
                     onChange={handleChange}
                     required
