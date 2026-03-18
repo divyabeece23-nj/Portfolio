@@ -21,25 +21,9 @@ const PROJECTS = [
     githubBackend: 'https://github.com/divyabeece23-nj/Movie-Book-App-Backend.git',
     live: 'https://reelreads-app.vercel.app',
   },
+  
   {
     num: '02',
-    title: 'InkWell',
-    subtitle: 'Full Stack · Blog Platform',
-    year: '2025',
-    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
-    summary: 'A free-to-use blogging platform where anyone can write, publish, and share blog posts. Clean writing experience with a focus on simplicity.',
-    caseStudy: {
-      ask: 'Build a blogging platform that makes it easy for anyone to write and publish posts — no paywalls, no clutter, just a clean space to share ideas.',
-      delivered: 'Full-stack blog app with React frontend and Node/Express backend. MongoDB for storing posts and user data. User authentication for managing your own posts. Clean, minimal UI focused on the reading and writing experience.',
-      knownAhead: ['React', 'Node.js / Express', 'MongoDB', 'REST APIs'],
-      hadToLearn: ['Rich text editing', 'Content management patterns', 'Deploying full-stack apps on Vercel + Render'],
-      nextSteps: ['Add rich text editor', 'Categories and tags for posts', 'Comments and likes', 'User profiles with post history'],
-    },
-    github: '#',
-    live: '#',
-  },
-  {
-    num: '03',
     title: 'Eventure',
     subtitle: 'Full Stack · Event Management',
     year: '2024',
@@ -52,7 +36,8 @@ const PROJECTS = [
       hadToLearn: ['Node.js / Express backend', 'API routing and middleware', 'State management for registration flows'],
       nextSteps: ['Add a database for persistent storage', 'User authentication', 'Event filtering by category and date', 'Email confirmations on registration'],
     },
-    github: '#',
+    github: 'https://github.com/divyabeece23-nj/Eventure-1.git',
+    githubBackend: 'https://github.com/divyabeece23-nj/Eventure-3-api.git',
     live: null,
   },
   {
@@ -69,8 +54,8 @@ const PROJECTS = [
       hadToLearn: ['Framer Motion layoutId pitfalls', 'Magnetic cursor physics', 'IntersectionObserver patterns'],
       nextSteps: ['Blog via headless CMS', 'Reduced-motion support', 'Improve mobile layout'],
     },
-    github: '#',
-    live: '#',
+    github: 'https://github.com/divyabeece23-nj/Portfolio.git',
+    live: 'https://divya-natarajan.vercel.app/',
   },
 ]
 
