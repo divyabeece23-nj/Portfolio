@@ -44,8 +44,8 @@ export default function Contact() {
 
           <div className="contact__socials reveal reveal-delay-4">
             {[
-              { label: 'GitHub', href: 'https://github.com' },
-              { label: 'LinkedIn', href: 'https://linkedin.com' },
+              { label: 'GitHub', href: 'https://github.com/divyabeece23-nj' },
+              { label: 'LinkedIn', href: 'https://www.linkedin.com/in/divyanat/' },
             ].map(({ label, href }) => (
               <a key={label} href={href} target="_blank" rel="noreferrer" className="contact__social">
                 {label} ↗

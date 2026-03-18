@@ -24,7 +24,10 @@
     position: sticky;
     top: calc(#{v.$nav-h} + 32px);
 
-    @include m.md { position: relative; top: auto; }
+    @include m.md {
+      position: relative;
+      top: auto;
+    }
   }
 
   &__img-wrap {
@@ -48,13 +51,18 @@
     overflow: hidden;
 
     // When user adds photo:
-    img { width: 100%; height: 100%; object-fit: cover; }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__img-tag {
-    position: absolute;
-    bottom: -14px;
-    left: 20px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 1.5rem;
     background: v.$white;
     border: 1px solid rgba(180, 170, 158, 0.3);
     border-radius: 99px;
@@ -63,7 +71,7 @@
     font-weight: 500;
     letter-spacing: 0.08em;
     color: v.$ink-muted;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 7px;
     box-shadow: 0 4px 16px rgba(24, 20, 18, 0.07);
@@ -79,8 +87,15 @@
   }
 
   @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0.4; }
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.4;
+    }
   }
 
   // ── Stats ──────────────────────────────────────────────
@@ -119,7 +134,9 @@
   &__right {
     padding-top: 48px;
 
-    @include m.md { padding-top: 0; }
+    @include m.md {
+      padding-top: 0;
+    }
   }
 
   &__heading {
@@ -149,7 +166,10 @@
       line-height: 1.85;
       color: v.$ink-muted;
 
-      strong { color: v.$ink; font-weight: 500; }
+      strong {
+        color: v.$ink;
+        font-weight: 500;
+      }
     }
   }
 
@@ -177,12 +197,20 @@
     @include m.underline-hover;
     transition: color 0.2s;
 
-    &:hover { color: v.$ink; }
+    &:hover {
+      color: v.$ink;
+    }
 
     &--accent {
       color: v.$accent;
-      &::after { background: v.$accent; }
-      &:hover  { color: v.$accent-dark; }
+
+      &::after {
+        background: v.$accent;
+      }
+
+      &:hover {
+        color: v.$accent-dark;
+      }
     }
   }
 
