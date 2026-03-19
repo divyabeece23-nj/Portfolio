@@ -86,12 +86,17 @@
   // ── Name ──────────────────────────────────────────────
   &__name {
     font-family: v.$font-display;
-    font-size: clamp(4rem, 11vw, 9.5rem);
+    font-size: clamp(2.4rem, 11vw, 9.5rem);
     font-weight: 600;
     letter-spacing: -0.04em;
     color: v.$ink;
     line-height: 1.05;
     overflow: visible;
+
+    @include m.sm {
+      font-size: clamp(2.2rem, 10vw, 3.5rem);
+      letter-spacing: -0.03em;
+    }
   }
 
   &__char {
